@@ -2,7 +2,7 @@
 include '../config.php';
 if(isset($_POST['checkcolors'])){
     $file=FILES_DIR.$client['dirname'].'/'.$_POST['checkcolors'];
-    if(substr($file,strpos($file,'.')+1)=='pdf'){
+    if(substr($file,strripos($file,'.')+1)=='pdf'){
         // $out=shell_exec('pwd');
         $out=shell_exec('gs -q  -o - -sDEVICE=inkcov '.$file);
         if(strpos($out,'error')===false){

@@ -2,6 +2,21 @@
 
 include '../includes/config.php';
 
+if(isset($_GET['reset'])){
+    $db->truncate('price');
+    $db->insert('price',['price'=>1,'name'=>'Letter']);
+    $db->insert('price',['price'=>2,'name'=>'Legal']);
+    $db->insert('price',['price'=>1,'name'=>'A4']);
+    $db->insert('price',['price'=>1,'name'=>'bnw']);
+    $db->insert('price',['price'=>2,'name'=>'grayscale']);
+    $db->insert('price',['price'=>1,'name'=>'colored']);
+    $_SESSION['msg']=[
+        'type'=>'success',
+        'msg'=>'Price reset successful'
+    ];
+    header('location:../prices.php');
+    return;
+}
 if(isset($_POST['paper'])){
     if(
         $db->update('price',['price'=>$_POST['Letter']],['name'=>'Letter'])>0 ||
