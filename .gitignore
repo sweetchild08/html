@@ -6,3 +6,5 @@ thumbnails/*
 *.html
 *.jpeg
 config.php
+.docker/logs/*
+.docker/mysql/*
