@@ -5,3 +5,4 @@ files/*
 thumbnails/*
 *.html
 *.jpeg
+config.php
