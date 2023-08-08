@@ -1,6 +1,6 @@
 <?php
 
-include '../includes/config.php';
+include '../../config.php';
 
 if(isset($_GET['reset'])){
     $db->truncate('price');

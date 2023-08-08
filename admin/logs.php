@@ -3,7 +3,7 @@ $page=[
   'isprotected'=>true,
   'name'=>'logs'
 ];
-include 'includes/config.php';
+include '../config.php';
 include 'includes/checksession.php';
 $res=$db->run("select * from printlogs order by created_at desc");
 ?>

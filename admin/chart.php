@@ -3,7 +3,7 @@ $page=[
   'isprotected'=>true,
   'name'=>'chart'
 ];
-include 'includes/config.php';
+include '../config.php';
 include 'includes/checksession.php';
 $res=$db->run("select count('*') as counter, month(created_at) as month from printlogs where year(created_at)=year(now()) group by month(created_at)");
 $data=[];

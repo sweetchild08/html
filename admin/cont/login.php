@@ -1,6 +1,6 @@
 <?php
 
-include '../includes/config.php';
+include '../../config.php';
 
 //print_r($_POST);die();
 if(isset($_POST['login']))
@@ -14,9 +14,9 @@ if(isset($_POST['login']))
         header("location:../login.php");
         return;
     }
+    echo $username;
     if($row=$db->run("SELECT * FROM user WHERE username = :username", ['username'=>$username])->fetch())
     {
-        echo $username;
         if($row['password']==md5($password))
         {
             $_SESSION['msg']=['type'=>'success','msg'=>'Login Successful'];

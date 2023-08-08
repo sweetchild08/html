@@ -3,7 +3,7 @@ $page=[
   'isprotected'=>true,
   'name'=>'home'
 ];
-include 'includes/config.php';
+include '../config.php';
 include 'includes/checksession.php';
 
 
