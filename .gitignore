@@ -8,3 +8,4 @@ thumbnails/*
 config.php
 .docker/logs/*
 .docker/mysql/*
+vendor/*
